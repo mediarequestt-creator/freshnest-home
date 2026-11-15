@@ -1,0 +1,212 @@
+/* FreshNest Home — clean, airy, sage green + white + warm neutral. No external fonts. */
+:root {
+  --sage: #7a9b76;
+  --sage-dark: #5c7a58;
+  --sage-light: #e8efe6;
+  --sage-pale: #f2f6f0;
+  --ink: #2e3b2c;
+  --ink-soft: #5a6b57;
+  --paper: #f7f5f0;
+  --white: #ffffff;
+  --line: #dfe5dc;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+a { color: var(--sage-dark); }
+a:hover { color: var(--sage); }
+
+/* ---------- header ---------- */
+.site-header {
+  background: var(--sage);
+  color: var(--white);
+  padding: 2.2rem 1.2rem 2rem;
+  text-align: center;
+}
+.site-header a.brand {
+  color: var(--white);
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.site-header .tagline {
+  margin: 0.35rem 0 0;
+  font-size: 1.05rem;
+  color: #eef4ec;
+}
+.site-header nav { margin-top: 1rem; }
+.site-header nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 1px;
+}
+
+/* ---------- layout ---------- */
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 3rem;
+  background: var(--white);
+}
+.intro {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin: 0 0 2rem;
+}
+
+/* ---------- home grid ---------- */
+.section-title {
+  font-size: 1.6rem;
+  margin: 2.2rem 0 0.4rem;
+  text-align: center;
+}
+.section-sub {
+  text-align: center;
+  color: var(--ink-soft);
+  margin: 0 0 1.6rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding-bottom: 2.5rem;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.25rem;
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+}
+.card:hover {
+  border-color: var(--sage);
+  box-shadow: 0 4px 14px rgba(90, 120, 85, 0.12);
+}
+.card .kicker {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  margin-bottom: 0.4rem;
+}
+.card h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.45rem;
+}
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- tip pages ---------- */
+.back-link {
+  display: inline-block;
+  margin: 1.2rem 0 0;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+.article h1 {
+  font-size: 1.9rem;
+  margin: 0.8rem 0 1rem;
+}
+.article h2 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+.article ul, .article ol { padding-left: 1.3rem; }
+.article li { margin-bottom: 0.45rem; }
+
+.callout {
+  background: var(--sage-pale);
+  border-left: 4px solid var(--sage);
+  border-radius: 0 8px 8px 0;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+}
+.callout strong { color: var(--sage-dark); }
+
+.safety {
+  background: #fdf6e8;
+  border-left: 4px solid #c9a227;
+  border-radius: 0 8px 8px 0;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+}
+.safety strong { color: #7a5c00; }
+
+.buy-box {
+  background: var(--sage-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin: 1.4rem 0;
+}
+.buy-box ul { margin: 0.4rem 0 0.6rem; }
+.buy-box .note {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.related { margin-top: 2.2rem; }
+.related h2 { border-top: 1px solid var(--line); }
+.related ul { list-style: none; padding-left: 0; }
+.related li { margin-bottom: 0.35rem; }
+
+/* ---------- footer ---------- */
+.site-footer {
+  background: var(--sage-dark);
+  color: #eef4ec;
+  text-align: center;
+  padding: 2rem 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.site-footer a { color: #ffffff; }
+.site-footer .brand-line {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+.site-footer p { margin: 0.3rem 0; }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .site-header a.brand { font-size: 1.6rem; }
+  .article h1 { font-size: 1.55rem; }
+  .cards { grid-template-columns: 1fr; }
+}
